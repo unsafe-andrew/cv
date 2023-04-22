@@ -1,160 +1,308 @@
-<html lang="en"><head><meta charSet="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Andrew Lushin's CV</title><style>@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-:root {
-  font-size: 20px;
-  font-family: "Lato", sans-serif;
-}
-
-a {
-  color: #2A273B;
-}
-a :visited {
-  color: black;
-}
-
-#backend-langs a {
-  color: #CAC1E8;
-}
-#backend-langs a:visited {
-  color: #DED4FF;
-}
-
-.of-screen, body > div:nth-child(3), body > div:nth-child(1) {
-  width: 100vw;
-  height: 100vh;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  color: #c7c3c4;
-}
-body > div:nth-child(1) {
-  background-color: #121010;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-}
-@media (max-width: 768px) {
-  body > div:nth-child(1) {
-    flex-direction: column;
-  }
-}
-body > div:nth-child(1) div:nth-child(1) {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-body > div:nth-child(1) div:nth-child(1) h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-body > div:nth-child(1) div:nth-child(1) h2 {
-  font-size: 1.5rem;
-  margin: 0;
-  margin-top: 0.5rem;
-  font-weight: 300;
-}
-body > div:nth-child(1) div:nth-child(2) {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 0.5rem;
-}
-body > div:nth-child(1) div:nth-child(2) img {
-  width: 20vh;
-  height: 20vh;
-  object-fit: cover;
-  border-radius: 1rem;
-  transition: opacity 0.5s;
-  opacity: 0;
-}
-@media (max-width: 768px) {
-  body > div:nth-child(1) div:nth-child(2) img {
-    width: 16vw;
-    height: 19vw;
-    border-radius: 0.5rem;
-  }
-  body > div:nth-child(3) > div:nth-child(2) {
-    text-align: center;
-  }
-  body > div:nth-child(3) > div:nth-child(2) a {
-    display: block;
-  }
-}
-body > div:nth-child(2) {
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  background: linear-gradient(0deg, #c7c3c4 50%, rgb(18, 16, 16) 50%);
-}
-@media (max-width: 768px) {
-  body > div:nth-child(2) {
-    flex-direction: column;
-  }
-}
-body > div:nth-child(2) h3 {
-  font-size: 1.7rem;
-  font-weight: 300;
-}
-body > div:nth-child(2) > div {
-  min-height: 50vh;
-  padding: 2rem;
-}
-@media (min-width: 769px) {
-  body > div:nth-child(2) > div {
-    width: 50vw;
-  }
-}
-body > div:nth-child(2) > div h4 {
-  margin-bottom: 0.3rem;
-}
-body > div:nth-child(2) > div ul {
-  margin: 0.4rem;
-  padding: 0;
-  list-style: none;
-  font-size: 0.8rem;
-}
-body > div:nth-child(2) > div ul :before {
-  content: "-";
-  font-weight: 700;
-  color: #C26570;
-  margin-right: 0.5rem;
-}
-body > div:nth-child(2) #backend-langs {
-  border-radius: 0 0 1rem 0;
-  background-color: #121010;
-  z-index: 1;
-}
-body > div:nth-child(2) #frontend-langs {
-  border-radius: 1rem;
-  background-color: #c7c3c4;
-  color: #121010;
-}
-body > div:nth-child(3) {
-  background-color: #c7c3c4;
-  color: #121010;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-body > div:nth-child(3) div h1 {
-  margin: 0;
-}
-body > div:nth-child(3) div h3 {
-  display: inline;
-}
-body > div:nth-child(3) .icon {
-  margin-right: 4px;
-}
-
-.icon {
-  height: 1rem;
-  position: relative;
-  top: 3px;
-  margin-right: 0.25rem;
-}</style><script src="loadpics.js"></script></head><body><div><div><h1>Andrew Lushin</h1><h2>Software Engineer</h2></div><div id="pics-container"></div></div><div><div id="backend-langs"><h3>Back-end</h3><div><h4><img class="icon" src="rust.png" />Rust</h4>What I did with Rust:<ul><li>Working with the fastest web-servers and frameworks (Actix, Axum, may-minihttp)</li><li>CLI utilities</li><li>Deno FFI</li><li>High-perfomant parsers (pest, nom)</li><li>Working with cryptographic algorithms</li></ul></div><div><h4><img class="icon" src="haskell.png" />Haskell</h4>What I did with Haskell:<ul><li>APIs with Happstack</li><li>Category Theory and type-level programming</li><li>Packaging Haskell programs with <img style="height: 0.8rem; margin-right: 3px; position: relative; top: 3px" src="nix.svg" />Nix</li></ul></div><div><h4><img class="icon" src="python.png" />Python</h4>What I did with Python:<ul><li>Web scraping</li><li>Telegram bots/userbots</li><li>Bitcoin and Ethereum utilities/apps</li></ul></div><div><h4><img class="icon" src="clojure.png" />Clojure</h4>What I did/worked in/with Clojure:<ul><li>Telegram bots with a self-written library</li><li>Concurrent data structures</li><li>Macros</li><li>Babashka</li></ul></div><div><h4><img class="icon" src="c.png" />C</h4>What I did with C:<ul><a href="https://github.com/unsafe-andrew/OpenDoas-cmpr">OpenDoas-cmpr</a><li>File organization utilities</li><li>Got the understanding of how X11 works by modifying dwm</li></ul></div><div><h4><img class="icon" src="php.png" />PHP</h4>What I did with PHP:<ul><li>An online school diary</li><li>Integrating a website template with Bitrix</li></ul></div></div><div id="frontend-langs"><h3>Front-end</h3><div><h4><img class="icon" src="html.png" />HTML/CSS</h4>What websites I did:<ul><li>A website for a photographer</li><li>A food delivery website</li></ul>What can I do in CSS:<ul><li>Flexbox</li><li>Grid</li><li>Animations</li><li>Responsive design</li></ul></div><div><h4><img class="icon" src="typescript.png" />TS/JS</h4>What I worked with in TS/JS:<ul><li>React/Preact</li><li>Vue.js</li><li>Solid.js</li><li>Alpine.js</li></ul>Backend JS/TS:<ul><li>Node.js + Express apps</li><li>Deno</li><li>Ramda.js</li><li>Fresh framework</li></ul></div><div><h4><img class="icon" src="elm.png" />Elm</h4></div><div><h3>Other</h3><div><h4><img class="icon" src="bash.png" />Bash</h4>What I did with Git:<ul><li>Advances bash scripting</li><li>Automating the deploy process</li></ul></div></div></div></div><div><h1>Contact me on..</h1><div><div><img src="telegram.png" class="icon" /><h3>Telegram:</h3> <a href="//t.me/unsafe_andrew">@unsafe_andrew</a></div><div><img src="email.png" class="icon" /><h3>Email:</h3> <a href="mailto:">unsafe.andrew@shitposting.expert</a></div></div></div></body></html>
+<html lang="en">
+	<head>
+		<meta charSet="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Andrew Lushin's CV</title>
+		<style>@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+			:root {
+			font-size: 20px;
+			font-family: "Lato", sans-serif;
+			}
+			a {
+			color: #2A273B;
+			}
+			a :visited {
+			color: black;
+			}
+			#backend-langs a {
+			color: #CAC1E8;
+			}
+			#backend-langs a:visited {
+			color: #DED4FF;
+			}
+			.of-screen, body > div:nth-child(3), body > div:nth-child(1) {
+			width: 100vw;
+			height: 100vh;
+			}
+			body {
+			margin: 0;
+			padding: 0;
+			color: #c7c3c4;
+			}
+			body > div:nth-child(1) {
+			background-color: #121010;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			gap: 2.5rem;
+			}
+			@media (max-width: 768px) {
+			body > div:nth-child(1) {
+			flex-direction: column;
+			}
+			}
+			body > div:nth-child(1) div:nth-child(1) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			}
+			body > div:nth-child(1) div:nth-child(1) h1 {
+			font-size: 3rem;
+			margin: 0;
+			}
+			body > div:nth-child(1) div:nth-child(1) h2 {
+			font-size: 1.5rem;
+			margin: 0;
+			margin-top: 0.5rem;
+			font-weight: 300;
+			}
+			body > div:nth-child(1) div:nth-child(2) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			grid-gap: 0.5rem;
+			}
+			body > div:nth-child(1) div:nth-child(2) img {
+			width: 20vh;
+			height: 20vh;
+			object-fit: cover;
+			border-radius: 1rem;
+			transition: opacity 0.5s;
+			opacity: 0;
+			}
+			@media (max-width: 768px) {
+			body > div:nth-child(1) div:nth-child(2) img {
+			width: 16vw;
+			height: 19vw;
+			border-radius: 0.5rem;
+			}
+			body > div:nth-child(3) > div:nth-child(2) {
+			text-align: center;
+			}
+			body > div:nth-child(3) > div:nth-child(2) a {
+			display: block;
+			}
+			}
+			body > div:nth-child(2) {
+			width: 100vw;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: row;
+			background: linear-gradient(0deg, #c7c3c4 50%, rgb(18, 16, 16) 50%);
+			}
+			@media (max-width: 768px) {
+			body > div:nth-child(2) {
+			flex-direction: column;
+			}
+			}
+			body > div:nth-child(2) h3 {
+			font-size: 1.7rem;
+			font-weight: 300;
+			}
+			body > div:nth-child(2) > div {
+			min-height: 50vh;
+			padding: 2rem;
+			}
+			@media (min-width: 769px) {
+			body > div:nth-child(2) > div {
+			width: 50vw;
+			}
+			}
+			body > div:nth-child(2) > div h4 {
+			margin-bottom: 0.3rem;
+			}
+			body > div:nth-child(2) > div ul {
+			margin: 0.4rem;
+			padding: 0;
+			list-style: none;
+			font-size: 0.8rem;
+			}
+			body > div:nth-child(2) > div ul :before {
+			content: "-";
+			font-weight: 700;
+			color: #C26570;
+			margin-right: 0.5rem;
+			}
+			body > div:nth-child(2) #backend-langs {
+			border-radius: 0 0 1rem 0;
+			background-color: #121010;
+			z-index: 1;
+			}
+			body > div:nth-child(2) #frontend-langs {
+			border-radius: 1rem;
+			background-color: #c7c3c4;
+			color: #121010;
+			}
+			body > div:nth-child(3) {
+			background-color: #c7c3c4;
+			color: #121010;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			}
+			body > div:nth-child(3) div h1 {
+			margin: 0;
+			}
+			body > div:nth-child(3) div h3 {
+			display: inline;
+			}
+			body > div:nth-child(3) .icon {
+			margin-right: 4px;
+			}
+			.icon {
+			height: 1rem;
+			position: relative;
+			top: 3px;
+			margin-right: 0.25rem;
+			}
+		</style>
+		<script src="loadpics.js"></script>
+	</head>
+	<body>
+		<div>
+			<div>
+				<h1>Andrew Lushin</h1>
+				<h2>Software Engineer</h2>
+			</div>
+			<div id="pics-container"></div>
+		</div>
+		<div>
+			<div id="backend-langs">
+				<h3>Back-end</h3>
+				<div>
+					<h4><img class="icon" src="rust.png" />Rust</h4>
+					What I did with Rust:
+					<ul>
+						<li>Working with the fastest web-servers and frameworks (Actix, Axum, may-minihttp)</li>
+						<li>CLI utilities</li>
+						<li>Deno FFI</li>
+						<li>High-perfomant parsers (pest, nom)</li>
+						<li>Working with cryptographic algorithms</li>
+					</ul>
+				</div>
+				<div>
+					<h4><img class="icon" src="haskell.png" />Haskell</h4>
+					What I did with Haskell:
+					<ul>
+						<li>APIs with Happstack</li>
+						<li>Category Theory and type-level programming</li>
+						<li>Packaging Haskell programs with <img style="height: 0.8rem; margin-right: 3px; position: relative; top: 3px" src="nix.svg" />Nix</li>
+					</ul>
+				</div>
+				<div>
+					<h4><img class="icon" src="python.png" />Python</h4>
+					What I did with Python:
+					<ul>
+						<li>Web scraping</li>
+						<li>Telegram bots/userbots</li>
+						<li>Bitcoin and Ethereum utilities/apps</li>
+					</ul>
+				</div>
+				<div>
+					<h4><img class="icon" src="clojure.png" />Clojure</h4>
+					What I did/worked in/with Clojure:
+					<ul>
+						<li>Telegram bots with a self-written library</li>
+						<li>Concurrent data structures</li>
+						<li>Macros</li>
+						<li>Babashka</li>
+					</ul>
+				</div>
+				<div>
+					<h4><img class="icon" src="c.png" />C</h4>
+					What I did with C:
+					<ul>
+						<a href="https://github.com/unsafe-andrew/OpenDoas-cmpr">OpenDoas-cmpr</a>
+						<li>File organization utilities</li>
+						<li>Got the understanding of how X11 works by modifying dwm</li>
+					</ul>
+				</div>
+				<div>
+					<h4><img class="icon" src="php.png" />PHP</h4>
+					What I did with PHP:
+					<ul>
+						<li>An online school diary</li>
+						<li>Integrating a website template with Bitrix</li>
+					</ul>
+				</div>
+        <div>
+					<h4><img class="icon" src="typescript.png" />TS/JS</h4>
+					What I can do with TS/JS:
+					<ul>
+						<li>Node.js + Express apps</li>
+						<li>Deno</li>
+						<li>Ramda.js</li>
+						<li>Fresh framework</li>
+					</ul>
+				</div>
+			</div>
+			<div id="frontend-langs">
+				<h3>Front-end</h3>
+				<div>
+					<h4><img class="icon" src="html.png" />HTML/CSS</h4>
+					What websites I did:
+					<ul>
+						<li>A website for a photographer</li>
+						<li>A food delivery website</li>
+					</ul>
+					What can I do in CSS:
+					<ul>
+						<li>Flexbox</li>
+						<li>Grid</li>
+						<li>Animations</li>
+						<li>Responsive design</li>
+					</ul>
+				</div>
+				<div>
+					<h4><img class="icon" src="typescript.png" />TS/JS</h4>
+					What I worked with in TS/JS:
+					<ul>
+						<li>React/Preact</li>
+						<li>Vue.js</li>
+						<li>Solid.js</li>
+						<li>Alpine.js</li>
+					</ul>
+					Backend JS/TS:
+					<ul>
+						<li>Node.js + Express apps</li>
+						<li>Deno</li>
+						<li>Ramda.js</li>
+						<li>Fresh framework</li>
+					</ul>
+				</div>
+				<div>
+					<h4><img class="icon" src="elm.png" />Elm</h4>
+				</div>
+				<div>
+					<h3>Other</h3>
+					<div>
+						<h4><img class="icon" src="bash.png" />Bash</h4>
+						What I did with Git:
+						<ul>
+							<li>Advances bash scripting</li>
+							<li>Automating the deploy process</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h1>Contact me on..</h1>
+			<div>
+				<div>
+					<img src="telegram.png" class="icon" />
+					<h3>Telegram:</h3>
+					<a href="//t.me/unsafe_andrew">@unsafe_andrew</a>
+				</div>
+				<div>
+					<img src="email.png" class="icon" />
+					<h3>Email:</h3>
+					<a href="mailto:">unsafe.andrew@shitposting.expert</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
