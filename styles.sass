@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
+
+:root
+  font-size: 20px
+
+body
+  margin: 0
+  padding: 0
+  font-family: 'Lato', sans-serif
+
+.of-screen
+  width: 100vw
+  height: 100vh
+
+body > div:nth-child(1)
+  @extend .of-screen
+  background-color: #121010
+  color: #c7c3c4
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  > div
+    display: flex
+    flex-direction: row
+    @media (max-width: 768px)
+      flex-direction: column
+      align-items: center
+      gap: 3rem
+    div
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      h1
+        font-size: 3rem
+        margin-top: 0
+        margin-bottom: 1rem
+        max-width: 80%
+        min-width: 50vw
+      h2
+        font-size: 1.5rem
+        margin: 0
+        font-weight: 400
+
+#pics
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-template-rows: repeat(3, 1fr)
+  grid-gap: 0.3rem
+  width: calc(30vw + 0.9rem)
+  img
+    width: 10vw
+    height: 10vw
+    border-radius: 0.5rem
+    opacity: 0
+    object-fit: cover
+    transition: opacity 1s
+
+@mixin ul-marker($color)
+  content: '-'
+  font-weight: 700
+  color: $color
+  margin-right: 0.5rem
+
+.icon
+  height: 1.8rem
+  position: relative
+  top: 0.2rem
+
+body > div:nth-child(2)
+  background-color: #121010
+  color: #c7c3c4
+  width: 100vw
+  box-sizing: border-box
+  padding: 1rem
+  display: flex
+  flex-direction: column
+  padding: 0
+  @media (min-width: 768px)
+    flex-direction: row
+  h1
+    margin: 0
+    margin-bottom: 1rem
+  span > span
+    font-size: 1.5rem
+    font-weight: 600
+  div.description
+    margin: 5px 0 0 0
+    ul
+      margin: 0
+      padding: 7px 1rem 
+      padding-left: 7px
+      list-style: none
+  > div:nth-child(1)
+    z-index: 1
+    padding: 4vw
+    background-color: #121010
+    border-radius: 0 0 1rem 0
+    width: 50vw
+    > span:nth-child(2) > span:nth-child(1)
+      color: #90615C
+      img
+        animation: spin 5s ease-in-out infinite
+        @keyframes spin
+          0%
+            transform: rotate(0deg)
+          30%
+            transform: rotate(360deg)
+          31%
+            transform: rotate(360deg)
+          100%
+            transform: rotate(360deg)
+    ul
+      :before
+        @include ul-marker(#90615C)
+    a
+      color: #90615C
+  > div:nth-child(2)
+    padding: 4vw
+    width: 50vw
+    background-color: #c7c3c4
+    color: #121010
+    border-radius: 1rem 0 0 0
+    > span:nth-child(2)
+      > span:nth-child(1)
+        color: #90615C
+      ul
+        :before
+          @include ul-marker(#C26570)
+    > span:nth-child(3)
+      ul
+        :before
+          @include ul-marker(#205A7D)
+      > span:nth-child(1)
+        color: #205A7D
+
+#etc
+  background-color: #ADAAAB
+  padding: 1rem
+  ul
+    :before
+      @include ul-marker(#205A7D)
+
+body > div:nth-child(3)
+  @extend .of-screen
+  position: relative
+  top: -1rem
+  height: calc(100vh + 1rem)
+  background-color: #c7c3c4
